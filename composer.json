@@ -1,0 +1,14 @@
+{
+	"name": "unify/web-wallet",
+	"autoload": {
+		"psr-4": {
+			"unify\\": "app/",
+            "unify\\database\\": "app/database/",
+            "unify\\rpc\\": "app/rpc/",
+            "unify\\modules\\": "app/modules/",
+			"unify\\views\\": "app/views/",
+			"unify\\authenticator\\": "app/authenticator/"
+		}
+
+	}
+}

@@ -1,0 +1,143 @@
+body {
+    background: #F2f2f2;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top:20px;
+}
+
+.inner-container {
+    padding: 15px;
+}
+
+#content {
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom:0;
+}
+
+.navbar-default {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #888888;
+    background: transparent;
+    border-right: 1px solid #e7e7e7;
+}
+
+@media only screen and  (max-width: 700px) {
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.alert-info {
+    border: none;
+    color: rgba(255,255,255,0.87);
+    background-color: #008DD2;
+}
+
+.alert {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.close {
+    line-height: 0.8;
+}
+
+.button-orange {
+    background: #EF7F1A;
+    color: white;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin: 0;
+        border-left: 1px solid #e7e7e7;
+        position: relative;
+        left: 107px;
+    }
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #2f2f2f;
+    border-bottom: 1px solid #008DD2;
+    background: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    border-bottom: 1px solid #008DD2;
+}
+
+.text-title {
+    font-size: 14px;
+}
+
+.logo-icon {
+    width: 50px;
+    position: relative;
+    bottom: 5px;
+}
+
+.h1, .h2, .h3, h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#unify-price {
+    float: right;
+    position: relative;
+    bottom: 41px;
+    font-size:17px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+
+.login-form {
+    width: 300px;
+}
