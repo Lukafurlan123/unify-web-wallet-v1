@@ -114,7 +114,7 @@ abstract class Template {
         
         <main class="container">
             <section id="logo">
-                <h1><img src="assets/images/icon.png" class="logo-icon"> Unify Wallet</h1>
+                <h1><a href="dashboard"><img src="assets/images/icon.png" class="logo-icon"></a></h1>
             </section>
             <section id="unify-price">
                 ';
@@ -140,20 +140,20 @@ abstract class Template {
                         } else {
                             echo '<li><a href="history">Transaction History</a></li>';
                         }
-                        if($active == "settings") {
-                            echo '<li class="active"><a href="settings">Settings</a></li>';
-                        } else {
-                            echo '<li><a href="settings">Settings</a></li>';
-                        }
                         if($active == "addresses") {
                             echo '<li class="active"><a href="addresses">Addresses</a></li>';
                         } else {
                             echo '<li><a href="addresses">Addresses</a></li>';
                         }
+        if($active == "settings") {
+            echo '<li class="active"><a href="settings">Settings</a></li>';
+        } else {
+            echo '<li><a href="settings">Settings</a></li>';
+        }
                         echo '
                         </ul>
-                        <ul class="nav navbar-nav navbar-right" style="position: relative; left: 90px;">
-                            <li><a href="contact">Contact Us</a></li>
+                        <ul class="nav navbar-nav navbar-right navbar-right-custom">
+                            <li><a href="mailto:support@unify.today">Contact Us</a></li>
                             <li><a href="logout">Log Out</a></li>
                         </ul>
                     </div>
@@ -179,7 +179,7 @@ abstract class Template {
         
         <main class="container">
             <section id="logo">
-                <h1><img src="assets/images/icon.png" class="logo-icon"> Unify Wallet</h1>
+                <h1><a href="dashboard"><img src="assets/images/icon.png" class="logo-icon"></a></h1>
             </section>
             <section id="unify-price">
                 ';
@@ -204,7 +204,7 @@ abstract class Template {
                         echo '
                         </ul>
                         <ul class="nav navbar-nav navbar-right" style="position: relative; left: 0px;">
-                            <li><a href="contact">Contact Us</a></li>
+                            <li><a href="mailto:support@unify.today">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -219,6 +219,7 @@ abstract class Template {
             </section>
         </main>
         <br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         ';

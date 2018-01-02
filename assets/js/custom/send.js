@@ -11,7 +11,6 @@ $("#send_form").submit(function(e) {
                 $("#errorContainer").html("<div class='alert alert-danger'>"+data.message+"</div>");
             } else if(data.type === 'success') {
                 $("#errorContainer").html("<div class='alert alert-success'>"+data.message+"</div>");
-                window.location = 'dashboard'
             }
         }
     );

@@ -86,11 +86,24 @@ class Wallet {
             ]);
             return;
         }
+
         /*
          * Uses session to get user object with all
          * user information
          */
         $member = Core::getUserObject($database);
+
+        /*
+         * Checks if member already had maximum amount of
+         * addresses added.
+         */
+        if(count($this->rcp->getAddressList($member->user_auth)) >= 10) {
+            echo json_encode([
+                "type"    => "error",
+                "message" => "You have already reached maximum address limit."
+            ]);
+            return;
+        }
 
         /*
          * Creates new wallet address by using rcp client
@@ -107,6 +120,17 @@ class Wallet {
             "type"    => "success",
             "message" => "You have successfully created new address."
         ]);
+    }
+
+    /**
+     * Gets wallet private key from given
+     * wallet address
+     *
+     * @param $address
+     */
+    public function getPrivateKey($address)
+    {
+        return $this->rcp->getPrivateKey($address);
     }
 
 }

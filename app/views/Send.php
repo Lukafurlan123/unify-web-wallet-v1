@@ -54,7 +54,7 @@ class Send extends Template {
             <h3 class="form-signin-heading">Send Unify</h3>
             <input type="text" name="wallet_address" id="wallet_address" class="form-control login-form" placeholder="Wallet address" required autofocus>
             <br>
-            <input type="number" name="amount" id="amount" class="form-control login-form" placeholder="Amount" required>
+            <input type="number" name="amount" id="amount" step=any class="form-control login-form" placeholder="Amount" required>
             <br>
             <button class="button-orange" type="submit">Send</button>
         </form>

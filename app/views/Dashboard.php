@@ -56,7 +56,7 @@ class Dashboard extends Template {
         <br>
         <b>Wallet value in dollars: </b> $'.$balance*$this->unifyPrice.'
         <br>
-        <b>Wallet address: </b> '.$rcp->getAddress($member->user_auth).'
+        <b>Primary wallet address: </b> '.$rcp->getAddress($member->user_auth).'
         ';
     }
 

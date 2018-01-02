@@ -134,19 +134,21 @@ $router->route(["GET", "POST"], "api/wallets/get", false, function($request, $da
     <table class="table table-bordered table-striped" id="alist">
         <thead>
             <tr>
+                <td>Actions:</td>
                 <td>Address:</td>
+                <td>Private key:</td>
             </tr>
         </thead>
         <tbody id="loadWallets">
-            <tr>
-                <td>' . $wallet->getWallet($database) . '</td>
-            </tr>
     ';
-
-    foreach($wallets as $wallet) {
+    /* . $sender->getPrivateKey($wallet) . */
+    $sender = new \unify\modules\Wallet();
+    foreach($wallets as $key => $wallet) {
         echo '
         <tr>
-            <td>' . $wallet . '</td>
+            <td><button class="copy" data-clipboard-target="#address'.$key.'">Copy address</button>&nbsp;&nbsp;<button class="copy" data-clipboard-target="#private'.$key.'">Copy private key</button></td>
+            <td id="address'.$key.'">' . $wallet . '</td>
+            <td id="private'.$key.'">' . $sender->getPrivateKey($wallet) . '</td>
         </tr>';
     }
 

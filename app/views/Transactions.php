@@ -65,9 +65,9 @@ class Transactions extends Template {
         foreach($transactions as $transaction) {
 
             if($transaction['category'] == "send") {
-                $tx_type = '<b style="color: #FF0000;">Sent</b>';
+                $tx_type = '<span style="color: #ad1a20;">Sent</span>';
             } else {
-                $tx_type = '<b style="color: #01DF01;">Received</b>';
+                $tx_type = '<span style="color: #29a315;">Received</span>';
             }
 
             echo '
@@ -76,7 +76,13 @@ class Transactions extends Template {
                 <td>'.$transaction['address'].'</td>
                 <td>'.$tx_type.'</td>
                 <td>'.abs($transaction['amount']).'</td>
-                <td>'.$transaction['fee'].'</td>
+                ';
+            if(isset($transaction['fee'])) {
+                echo '<td>'.$transaction['fee'].'</td>';
+            } else {
+                echo '<td></td>';
+            }
+            echo '
                 <td>'.$transaction['confirmations'].'</td>
             </tr>';
 

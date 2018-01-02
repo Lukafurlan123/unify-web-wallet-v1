@@ -2,12 +2,14 @@ body {
     background: #F2f2f2;
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
+    background: url("../images/background.png")  no-repeat fixed center;
+    background-size: cover;
 }
 
 .container {
     width: 100%;
     max-width: 1000px;
-    margin-top:20px;
+    margin-top:150px;
 }
 
 .inner-container {
@@ -87,6 +89,10 @@ body {
         position: relative;
         left: 107px;
     }
+    .navbar-right-custom {
+        position: relative;
+        left: 97px;
+    }
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -104,9 +110,10 @@ body {
 }
 
 .logo-icon {
-    width: 50px;
+    width: 80px;
     position: relative;
     bottom: 5px;
+    left:10px;
 }
 
 .h1, .h2, .h3, h1, h2 {
@@ -140,4 +147,19 @@ body {
 
 .login-form {
     width: 300px;
+}
+
+.navbar-nav {
+    margin: 0 ;
+}
+
+.copy {
+    font-size:10px;
+    background: white;
+}
+
+@media only screen and (max-width: 700px) {
+    .container-fluid {
+        padding: 0;
+    }
 }

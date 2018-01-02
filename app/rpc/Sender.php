@@ -16,7 +16,7 @@ class Sender {
 
 	function getBalance($userAuth)
 	{
-		return $this->jsonRPC->getbalance("zelles(" . $userAuth . ")", 6);
+		return $this->jsonRPC->getbalance($userAuth, 6);
 	}
 
 	function getInfo()
@@ -26,27 +26,32 @@ class Sender {
 
     function getAddress($userAuth)
     {
-		return $this->jsonRPC->getaccountaddress("zelles(" . $userAuth . ")");
+		return $this->jsonRPC->getaccountaddress($userAuth);
 	}
 
 	function getAddressList($userAuth)
 	{
-		return $this->jsonRPC->getaddressesbyaccount("zelles(" . $userAuth . ")");
+		return $this->jsonRPC->getaddressesbyaccount($userAuth);
 	}
 
 	function getTransactionList($userAuth)
 	{
-		return $this->jsonRPC->listtransactions("zelles(" . $userAuth . ")", 10);
+		return $this->jsonRPC->listtransactions($userAuth, 10);
 	}
 
 	function getNewAddress($userAuth)
 	{
-		return $this->jsonRPC->getnewaddress("zelles(" . $userAuth . ")");
+		return $this->jsonRPC->getnewaddress($userAuth);
 	}
 
 	function withdraw($userAuth, $address, $amount)
 	{
-		return $this->jsonRPC->sendfrom("zelles(" . $userAuth . ")", $address, (float)$amount, 6);
+		return $this->jsonRPC->sendfrom($userAuth, $address, (float)$amount, 6);
+	}
+
+	function getPrivateKey($address)
+	{
+		return $this->jsonRPC->dumpprivkey($address);
 	}
 }
 ?>

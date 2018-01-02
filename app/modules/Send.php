@@ -21,7 +21,7 @@ class Send {
      * @param $amount
      * @param $wallet
      */
-    public function sendUnify($database, $amount, $wallet)
+    public function sendUnify($database, $wallet, $amount)
     {
         /*
          * Checks if member is logged in since api
@@ -48,6 +48,17 @@ class Send {
          * user information
          */
         $member = Core::getUserObject($database);
+
+        /*
+         * Checks if amount is smaller or equal to 0
+         */
+        if($amount <= 0) {
+            echo json_encode([
+                "type"    => "error",
+                "message" => "You can only send amount of coins that is bigger then 0."
+            ]);
+            return;
+        }
 
         /*
          * Checks if wallet balance is big enough for transaction.

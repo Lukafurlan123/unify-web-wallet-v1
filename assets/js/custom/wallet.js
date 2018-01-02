@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#loadWallets").load("api/wallets/get");
+    new Clipboard('.copy');
 });
 
 $("#addWallet").click(function() {
